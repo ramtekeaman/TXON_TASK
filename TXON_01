@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Landing Page</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+		h1 {
+			margin: 0;
+			font-size: 36px;
+		}
+		main {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		section {
+			margin: 20px 0;
+		}
+		h2 {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+		p {
+			margin: 0;
+			line-height: 1.5;
+		}
+		button {
+			background-color: #333;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 18px;
+		}
+		button:hover {
+			background-color: #555;
+		}
+		footer {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Welcome to my landing page</h1>
+	</header>
+	<main>
+		<section>
+			<h2>Section 1</h2>
+			<p>it is section 1 which show the all details about the product</p>
+			<button>Learn More</button>
+		</section>
+		<section>
+			<h2>Section 2</h2>
+			<p>r its is refrence of section 1</p>
+			<button>Learn More</button>
+		</section>
+		<section>
+			<h2>Section 3</h2>
+			<p>all contact details are stored in section 3</p>
+			<button>Learn More</button>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 My Landing Page. All rights reserved.</p>
+	</footer>
+</body>
+</html>
