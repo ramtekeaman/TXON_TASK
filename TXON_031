@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To-Do List App</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+		}
+		.todoapp {
+			max-width: 400px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #eee;
+			border-radius: 5px;
+		}
+		.form {
+			display: flex;
+			margin-bottom: 20px;
+		}
+		.form input[type="text"] {
+			flex-grow: 1;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			font-size: 18px;
+			box-shadow: 0 0 5px rgba(0,0,0,0.3);
+		}
+		.form button {
+			padding: 10px;
+			background-color: #333;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			font-size: 18px;
+			cursor: pointer;
+			box-shadow: 0 0 5px rgba(0,0,0,0.3);
+		}
+		.form button:hover {
+			background-color: #555;
+		}
+		.list {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.list li {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px;
+			margin-bottom: 10px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0,0,0,0.3);
+		}
+		.list li span {
+			flex-grow: 1;
+			margin-right: 10px;
+			word-wrap: break-word;
+		}
+		.list li button {
+			padding: 5px;
+			background-color: #f00;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+		.list li button:hover {
+			background-color: #c00;
+		}
+	</style>
+</head>
+<body>
+	<h1>To-Do List App</h1>
+	<div class="todoapp">
+		<form class="form" onsubmit="addItem(event)">
+			<input type="text" id="new-item" placeholder="Add new item" required>
+			<button type="submit">Add</button>
+		</form>
+		<ul class="list" id="list">
+		</ul>
+	</div>
+	<script>
+		const list = document.getElementById('list');
+		const addItem = (event) => {
+			event.preventDefault();
+			const input = document.getElementById('new-item');
+			const itemText = input.value;
+			const item = document.createElement('li');
+			item.innerHTML = `<span>${itemText}</span><button onclick="removeItem(event)">X</button>`;
+			list.appendChild(item);
+			input.value = '';
+		};
+		const removeItem = (event) => {
+			event.target.parentNode.remove();
+		};
+	</script>
+</body>
+</html>
